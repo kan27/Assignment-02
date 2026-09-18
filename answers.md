@@ -164,3 +164,14 @@ Run Time: $O(n^2 \log n)$
 
 Part 2: Algorithm Choice
 We choose algorithm C, because it has the most efficient asymptotic growth rate of $O(n^2 \log n)$.Algorithm B is exponential time, making it poor for large inputs, Algorithm A is slower than Algorithm C aswell.
+
+3.
+Bits (n)   | Quadratic (ms)  | Subquadratic (ms)
+----------------------------------------------
+1000       | 0.003338        | 0.000477       
+10000      | 0.000238        | 0.000000       
+100000     | 0.000000        | 0.000000       
+1000000    | 0.001431        | 0.000000       
+10000000   | 0.001669        | 0.000238       
+100000000  | 0.002861        | 0.000000  
+Subquadratic is faster
