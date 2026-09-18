@@ -45,7 +45,6 @@ def quadratic_multiply(x, y):
 
 def subquadratic_multiply(x, y):
     ### TODO
-    pass
     n = max(len(x.binary_vec), len(y.binary_vec))
     
     if n <= 1:
@@ -77,6 +76,7 @@ def subquadratic_multiply(x, y):
     term3 = z0
     
     return term1 + term2 + term3
+    pass
     ###
 
 def time_multiply(x, y, f):
