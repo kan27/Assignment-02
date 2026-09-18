@@ -144,3 +144,23 @@ W(n) = $\log \log n$
 .  
    
 2. **Algorithms Comparison**
+
+Part 1: Asymptotic Running Times
+Algorithm A
+Recursion Equation: $T(n) = 5T(\frac{n}{2}) + O(n)$
+Using the Master Theorem or the brick (recursion tree) method, we evaluate $a = 5$, $b = 2$, and $f(n) = O(n)$. Comparing $f(n) = O(n^1)$ to $n^{\log_2 5} \approx n^{2.32}$, Case 1 applies because the work is leaf-dominated.
+Run Time: $O(n^{\log_2 5})$ 
+
+Algorithm B
+Recursion Equation: $T(n) = 2T(n-1) + O(1)$
+Analysis: The recurrence is a binary tree of height $n$ with $2^n$ leaves, giving an exponential sum (leaf-dominated):$T(n) = 2^n T(0) + c \sum_{i=0}^{n-1} 2^i = O(2^n)$
+Run Time: $O(2^n)$
+
+Algorithm C
+Recursion Equation: $T(n) = 9T(\frac{n}{3}) + O(n^2)$
+Analysis: Using the Master Theorem, we have $a = 9$, $b = 3$, and $f(n) = O(n^2)$. Comparing $f(n) = O(n^2)$ to $n^{\log_3 9} = n^2$ (balanced)
+work is evenly balanced across all levels of the tree ($n^2$ per level), ($\log n$ levels)
+Run Time: $O(n^2 \log n)$
+
+Part 2: Algorithm Choice
+We choose algorithm C, because it has the most efficient asymptotic growth rate of $O(n^2 \log n)$.Algorithm B is exponential time, making it poor for large inputs, Algorithm A is slower than Algorithm C aswell.
