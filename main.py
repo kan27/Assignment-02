@@ -107,6 +107,5 @@ def compare_multiply():
         
     return results
 
-compare_multiply()
     
 
